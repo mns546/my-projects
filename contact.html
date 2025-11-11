@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <th:block th:replace="fragments/head :: head('Contact')"></th:block>
+  <body x-data="{open:false}" class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <th:block th:replace="fragments/nav :: nav"></th:block>
+    <main class="max-w-7xl mx-auto px-4 pt-10">
+      
+<section class="grid md:grid-cols-2 gap-10">
+  <div>
+    <h1 class="text-3xl font-bold">Get in Touch</h1>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Tell us about your project and we’ll reach out.</p>
+    <div th:if="${success}" class="mt-4 p-3 rounded-lg bg-green-100 text-green-800" th:text="${success}"></div>
+    <div th:if="${error}" class="mt-4 p-3 rounded-lg bg-red-100 text-red-800" th:text="${error}"></div>
+    <form class="mt-6 space-y-4" method="post" th:action="@{/contact}">
+      <div>
+        <label class="block text-sm mb-1">Name</label>
+        <input name="name" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2" placeholder="Your name" required>
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Email</label>
+        <input name="email" type="email" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2" placeholder="you@example.com" required>
+      </div>
+      <div>
+        <label class="block text-sm mb-1">Message</label>
+        <textarea name="message" rows="5" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2" placeholder="Tell us about your needs" required></textarea>
+      </div>
+      <button class="px-5 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 hover-lift" type="submit">Send</button>
+    </form>
+    <div class="mt-8 text-sm">
+      <p>No. 1 Jason Moyo Avenue, Kopje Plaza, Harare, Zimbabwe</p>
+      <p>+263 77 600 0380</p>
+      <p><a class="underline" href="mailto:engpeacechihanga@gmail.com">engpeacechihanga@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="rounded-3xl overflow-hidden shadow-soft">
+    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1581092921461-eab62e97a776?q=80&w=1600&auto=format&fit=crop" alt="Engineer using surveying equipment" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop';">
+  </div>
+</section>
+
+    </main>
+    <th:block th:replace="fragments/footer :: footer"></th:block>
+  </body>
+</html>

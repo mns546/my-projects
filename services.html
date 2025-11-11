@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <th:block th:replace="fragments/head :: head('Services')"></th:block>
+  <body x-data="{open:false}" class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <th:block th:replace="fragments/nav :: nav"></th:block>
+    <main class="max-w-7xl mx-auto px-4 pt-10">
+      
+<section>
+  <h1 class="text-3xl font-bold">Services</h1>
+  <p class="mt-2 text-slate-600 dark:text-slate-300">Engineering & Construction and Consulting Services.</p>
+
+  <div class="mt-8 grid md:grid-cols-2 gap-6">
+    <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover-lift">
+      <h2 class="text-xl font-semibold">Engineering & Construction</h2>
+      <ul class="mt-3 list-disc pl-5 space-y-1 text-sm">
+        <li>Roads</li>
+        <li>Water & Sewage Reticulation</li>
+        <li>Drainage</li>
+        <li>Buildings</li>
+        <li>Structural Concrete</li>
+        <li>Steel Fabrication & Installation</li>
+      </ul>
+    </div>
+    <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover-lift">
+      <h2 class="text-xl font-semibold">Consulting & Project Management</h2>
+      <ul class="mt-3 list-disc pl-5 space-y-1 text-sm">
+        <li>End‑to‑end Project Implementation</li>
+        <li>Procurement Services</li>
+        <li>Structural Designs & Drawings</li>
+        <li>Project & Contract Administration</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-bold mt-12">Sector Expertise</h2>
+  <div class="mt-6 grid md:grid-cols-2 gap-6">
+    <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover-lift">
+      <h3 class="font-semibold">Civil Engineering</h3>
+      <p class="text-sm mt-2">Highways & transportation; water supply & treatment; sewage & effluent; infrastructure for residential, industrial, and commercial developments.</p>
+    </div>
+    <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover-lift">
+      <h3 class="font-semibold">Structural Engineering</h3>
+      <p class="text-sm mt-2">Commercial (shopping complexes, supermarkets, hotels), Industrial (factories, workshops, service stations), Institutional (schools, hospitals), Residential (single/multi‑storey, split‑level), Special structures (reservoirs, tanks, silos, car parks, towers, bridges).</p>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <th:block th:replace="fragments/footer :: footer"></th:block>
+  </body>
+</html>

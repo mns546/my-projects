@@ -1,0 +1,40 @@
+<head th:fragment="head(title)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title th:text="${title} + ' | Changilee Contractors'">Changilee Contractors</title>
+  <meta name="description" content="Construction-focused engineering — roads, water & sewage, drainage, buildings, structural concrete, steel fabrication & installation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Changilee Contractors" />
+  <meta property="og:description" content="Engineering & Construction in Zimbabwe" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1437419764061-2473afe69fc2?q=80&w=1600&auto=format&fit=crop" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="/js/theme.js"></script>
+  <script>
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduce-motion');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji']
+          },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.08)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hover-lift{transition:transform .25s ease, box-shadow .25s ease}
+    .hover-lift:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+    .img-zoom{transition:transform .5s ease}
+    .group:hover .img-zoom{transform:scale(1.05)}
+    .fade-in{animation:fadeIn .6s ease both}
+    @keyframes fadeIn{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+    .reduce-motion *{animation:none !important; transition:none !important}
+  </style>
+</head>
